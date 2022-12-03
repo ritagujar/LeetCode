@@ -29,11 +29,9 @@ class Solution {
         // code here
         Long arr[] = new Long[2];
        Long gcdNum = gcd(A, B);
-       Long lcm = A*B / gcdNum;
-       arr[0] = lcm;
-       arr[1] = gcdNum;
+       Long lcmNum = A*B / gcdNum;
        
-       return arr;
+       return new Long[]{lcmNum, gcdNum};
        
     }
     
