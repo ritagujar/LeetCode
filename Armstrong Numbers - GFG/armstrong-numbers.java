@@ -24,14 +24,13 @@ class Solution {
         // code here
         int temp = n;
         int sum = 0;
-        
-        while(temp != 0) {
-            int digit = temp % 10;
-            sum += digit*digit*digit;
-            temp /= 10;
+        while(n != 0){
+            int digit = n % 10;
+            sum += digit * digit * digit;
+            n /= 10;
         }
         
-        if(sum == n) 
+        if(temp == sum)
             return "Yes";
         return "No";
     }
