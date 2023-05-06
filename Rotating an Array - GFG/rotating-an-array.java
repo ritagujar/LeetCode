@@ -41,26 +41,22 @@ class Solution {
     void leftRotate(int[] arr, int n, int d) {
         // code here
         
-        int k = d % n;
+        d = d % n;
         
-        // reverseArray(arr, 0, arr.length-k-1);
-        // reverseArray(arr, arr.length-k, arr.length-1);
-        // reverseArray(arr, 0, arr.length-1);
-        
-        
-        reverseArray(arr, 0, k-1);
-        reverseArray(arr, k, n-1);
+        reverseArray(arr, 0, d-1);
+        reverseArray(arr, d, n-1);
         reverseArray(arr, 0, n-1);
+        
     }
     
     void reverseArray(int[] arr, int start, int end){
-        while(start < end){
-            int temp = (int)arr[start];
+       while(start < end) {
+            int temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
-            
+        
             start++;
             end--;
-        }
+       }
     }
 }
