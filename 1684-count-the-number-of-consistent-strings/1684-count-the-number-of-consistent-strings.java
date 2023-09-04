@@ -3,14 +3,13 @@ class Solution {
         int count = 0;
         
         for(String word: words){
-            boolean isValid = true;
-            
+            boolean flag = true;
             for(char ch: word.toCharArray()){
                 if(!allowed.contains(String.valueOf(ch)))
-                    isValid = false;
+                    flag = false;
             }
             
-            if(isValid)
+            if(flag)
                 count++;
         }
         
