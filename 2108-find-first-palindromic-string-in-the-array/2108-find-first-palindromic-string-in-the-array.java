@@ -1,21 +1,12 @@
 class Solution {
     public String firstPalindrome(String[] words) {
+        StringBuffer sb = null;
         for(String word: words){
-            if(isPalindrom(word))
+            sb = new StringBuffer(word);
+            if(sb.reverse().toString().equals(word))
                 return word;
         }
         
         return "";
-    }
-    
-    public boolean isPalindrom(String word) {
-        String res = "";
-        
-        for(int i = word.length()-1; i >= 0; i--)
-            res += word.charAt(i);
-        
-        if(res.equals(word))
-            return true;
-        return false;
     }
 }
